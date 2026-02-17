@@ -57,7 +57,7 @@ Se usa para **guardar temporalmente** cambios que no están listos para un commi
 * **`git diff`:** Muestra las diferencias exactas línea por línea entre archivos.
 * **`git show`:** Muestra el contenido detallado de un commit específico.
 
-## 💻 Programación 
+##  Programación 
 
 ### 15. ¿Cuáles son los tipos de datos primitivos en Java?
 Java tiene 8 tipos de datos primitivos:
@@ -96,3 +96,63 @@ Controlan la visibilidad de las clases, métodos y variables. Los más comunes s
 ### 22. ¿Qué es una variable de entorno?
 Es un valor dinámico cargado en el sistema operativo que puede ser utilizado por los procesos en ejecución.
 * **Importancia:** Permiten configurar aspectos del sistema sin cambiar el código (por ejemplo, la ruta de instalación de Java en `JAVA_HOME` o el `PATH` para ejecutar comandos desde cualquier carpeta).
+
+##  Programación Practica
+
+### 1. Calculadora Básica
+
+```java
+public class Calculadora {
+    public static void main(String[] args) {
+        // Valores por defecto
+        double num1 = 10;
+        double num2 = 5;
+
+        System.out.println("Número 1: " + num1);
+        System.out.println("Número 2: " + num2);
+        System.out.println("-------------------------");
+        System.out.println("Suma: " + (num1 + num2));
+        System.out.println("Resta: " + (num1 - num2));
+        System.out.println("Multiplicación: " + (num1 * num2));
+        System.out.println("División: " + (num1 / num2));
+    }
+}
+
+public class ContadorLetras {
+    public static void main(String[] args) {
+        // Palabra Programacion
+        String palabra = "programacion";
+        int vocales = 0;
+        int consonantes = 0;
+
+        for (int i = 0; i < palabra.length(); i++) {
+            char letra = palabra.charAt(i);
+
+            if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+                vocales++;
+            } else {
+                consonantes++;
+            }
+        }
+
+        System.out.println("Palabra: " + palabra);
+        System.out.println("Vocales: " + vocales);
+        System.out.println("Consonantes: " + consonantes);
+    }
+}
+
+public class InvertirTexto {
+    public static void main(String[] args) {
+        // Texto por defecto
+        String original = "java";
+        String invertido = "";
+
+        // Bucle que recorre de atrás hacia adelante
+        for (int i = original.length() - 1; i >= 0; i--) {
+            invertido = invertido + original.charAt(i);
+        }
+
+        System.out.println("Original: " + original);
+        System.out.println("Invertido: " + invertido);
+    }
+}
